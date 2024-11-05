@@ -1,0 +1,40 @@
+.about-container {
+    position: relative;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .image-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px; /* Ajusta este valor para mover las imágenes más abajo */
+  }
+  
+  .about-image {
+    width: 33.33%; /* Cada imagen ocupa un tercio del ancho */
+    height: 400px; /* Ajusta esta altura como prefieras */
+    object-fit: cover; /* Asegura que las imágenes mantengan un buen aspecto */
+  }
+  
+  .info-box {
+    position: absolute;
+    bottom: -210px; /* Para que la mitad esté fuera de las imágenes */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
+    padding: 20px;
+    min-height: 250px;
+    width: 70%; /* Ajusta el tamaño del cuadro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
+  }
+  
+  .info-box h2 {
+    margin-top: 0;
+  }
+  
+  .info-box p {
+    margin: 0;
+  }
+  
+ 

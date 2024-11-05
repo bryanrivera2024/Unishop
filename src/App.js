@@ -1,27 +1,24 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'; // Importamos lo necesario de react-router-dom
 import './App.css';
+import imagen1 from "./imagen1.jpeg";
+import imagen2 from "./imagen2.jpeg";
+import About from './About'; // Asegúrate de crear este archivo para la nueva página About
 
-
-<nav className="navbar bg-body-tertiary" style={{ height: '100vh', backgroundImage: "url('https://poemanalysis.com/wp-content/uploads/2022/10/Going-to-See-King-Lear-by-Jackie-Kay-Visual-Representation.jpg')" }}>
-</nav>
-function App() {
+function Home() {
   return (
     <div className="app-container">
-      {/* Menú de navegación */}
       <header>
         <nav className="navbar">
           <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About Us</a></li>
+            <li><Link to="/">Home</Link></li> {/* Usamos Link en lugar de <a href> */}
+            <li><Link to="/about">About Us</Link></li>
             <li><a href="#profile">Profile</a></li>
             <li><a href="#categories">Categories</a></li>
           </ul>
         </nav>
         <div className="linea"></div>
       </header>
-
-
-
 
       {/* Banner y contenido */}
       <section className="banner">
@@ -37,19 +34,17 @@ function App() {
           <button>Party Bag</button>
         </div>
 
-        
-
         <div className="images-container">
           <div className="item">
-            <img src="/images/producto1.jpg" alt="Producto 1" />
+            <img src={imagen1} alt="Producto 1" />
             <p>Shoes</p>
           </div>
           <div className="item">
-            <img src="" alt="Producto 2" />
+            <img src={imagen2} alt="Producto 2" />
             <p>Clothes</p>
           </div>
           <div className="item">
-            <img src="/images/producto3.jpg" alt="Producto 3" />
+            <img src={imagen1} alt="Producto 3" />
             <p>Appliances</p>
           </div>
         </div>
@@ -58,5 +53,15 @@ function App() {
   );
 }
 
-export default App;
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} /> {/* Página principal */}
+        <Route path="/about" element={<About />} /> {/* Nueva página About */}
+      </Routes>
+    </Router>
+  );
+}
 
+export default App;
