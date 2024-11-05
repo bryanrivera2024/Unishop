@@ -1,14 +1,21 @@
 import React from 'react';
 import './App.css';
+import imagen from "./Instagram-Icon.png"
+import imagen2 from "./descarga (3).png"
+import imagen3 from "./x logo.png"
+import imagen4 from "./UNISHOP 1.0.png"
 
 
-<nav className="navbar bg-body-tertiary" style={{ height: '100vh', backgroundImage: "url('https://poemanalysis.com/wp-content/uploads/2022/10/Going-to-See-King-Lear-by-Jackie-Kay-Visual-Representation.jpg')" }}>
-</nav>
+
 function App() {
   return (
     <div className="app-container">
       {/* Menú de navegación */}
       <header>
+        <div className="logo">
+          <img src={imagen4} alt="Unishop Logo" />
+          <h1>UNISHOP</h1>
+        </div>
         <nav className="navbar">
           <ul>
             <li><a href="#home">Home</a></li>
@@ -19,42 +26,41 @@ function App() {
         </nav>
         <div className="linea"></div>
       </header>
+      <div className="background-text"><h2>Join us in social media</h2></div>
 
+      {/* contenido */}
+      <main>
+        <section className="social-media">
+          <div className="icons">
+            <div className="icon">
+              <img src={imagen} alt="Instagram" />
+              <p>@UNISHOPONECLICK</p>
+            </div>
+            <div className="icon">
+              <img src={imagen3} alt="TikTok" />
+              <p>@UNISHOPHUB</p>
+            </div>
+            <div className="icon">
+              <img src={imagen2} alt="Facebook" />
+              <p>@UNISHOPGLOBAL</p>
+            </div>
+          </div>
+        </section>
+      </main>
 
-
-
-      {/* Banner y contenido */}
-      <section className="banner">
-        <h1>Our New Collection</h1>
-        <input type="text" placeholder="Search new collection..." className="search-bar" />
-      </section>
-
-      <section className="main-content">
-        <div className="buttons-container">
-          <button>New Collection</button>
-          <button>Special Promo</button>
-          <button>Casual Bag</button>
-          <button>Party Bag</button>
+      {/*footer*/}
+      <footer className="footer text-center bg-body-tertiary">
+        <div className="footer-content text-center p-3">
+          <p>
+            © 2024 Copyright:
+            <a href="#" className="footer-link">
+              {"Unishop.com"}
+            </a>
+          </p>
         </div>
-
-        
-
-        <div className="images-container">
-          <div className="item">
-            <img src="/images/producto1.jpg" alt="Producto 1" />
-            <p>Shoes</p>
-          </div>
-          <div className="item">
-            <img src="" alt="Producto 2" />
-            <p>Clothes</p>
-          </div>
-          <div className="item">
-            <img src="/images/producto3.jpg" alt="Producto 3" />
-            <p>Appliances</p>
-          </div>
-        </div>
-      </section>
+      </footer>
     </div>
+
   );
 }
 
