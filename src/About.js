@@ -1,15 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // Asegúrate de importar Link para la navegación
+import { Link } from 'react-router-dom'; 
 import './About.css';
 
-import imagen1 from './imagen1.jpeg';
-import imagen2 from './imagen2.jpeg';
-import imagen3 from './imagen1.jpeg';
+import imagen1 from './Joyeria.webp';
+import imagen2 from './Ropa.jpg';
+import imagen3 from './Interior.webp';
 
 function About() {
   return (
     <div className="about-container">
-      {/* Menú de navegación dentro de About.js */}
+     
       <header>
         <nav className="navbar">
           <ul>
@@ -34,8 +34,28 @@ function About() {
           Nuestra misión es brindar calidad, confianza y estilo en cada uno de nuestros productos.
         </p>
       </div>
+      <div className="lower-section"></div> {/* Sección inferior con fondo café */}
+
+      <div className="about-content">
+  {/* Imagen a la izquierda */}
+  <div className="about-image-container">
+    <img src={imagen3} alt="Visión y Misión" className="about-image" />
+  </div>
+
+  {/* Texto a la derecha */}
+  <div className="about-text-container">
+    <h2>Visión</h2>
+    <p>Nuestra visión es...</p> {/* Cambia por el texto de tu visión */}
+
+    <h2>Misión</h2>
+    <p>Nuestra misión es...</p> {/* Cambia por el texto de tu misión */}
+  </div>
+</div>
+
+
     </div>
   );
 }
+
 
 export default About;

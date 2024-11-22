@@ -1,9 +1,11 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'; // Importamos lo necesario de react-router-dom
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
-import imagen1 from "./imagen1.jpeg";
-import imagen2 from "./imagen2.jpeg";
-import About from './About'; // Asegúrate de crear este archivo para la nueva página About
+
+import imagen3 from "./Electrodomesticos.webp";
+import imagen4 from "./Clothes.webp";
+import imagen5 from "./Shoes.webp";
+import About from './About';
 
 function Home() {
   return (
@@ -11,7 +13,7 @@ function Home() {
       <header>
         <nav className="navbar">
           <ul>
-            <li><Link to="/">Home</Link></li> {/* Usamos Link en lugar de <a href> */}
+            <li><Link to="/">Home</Link></li>
             <li><Link to="/about">About Us</Link></li>
             <li><a href="#profile">Profile</a></li>
             <li><a href="#categories">Categories</a></li>
@@ -20,11 +22,11 @@ function Home() {
         <div className="linea"></div>
       </header>
 
-      {/* Banner y contenido */}
       <section className="banner">
         <h1>Our New Collection</h1>
         <input type="text" placeholder="Search new collection..." className="search-bar" />
       </section>
+
 
       <section className="main-content">
         <div className="buttons-container">
@@ -36,18 +38,20 @@ function Home() {
 
         <div className="images-container">
           <div className="item">
-            <img src={imagen1} alt="Producto 1" />
-            <p>Shoes</p>
+            <img src={imagen3} alt="Producto 1" />
+            <button className="product-button">Electrodomestics</button>
           </div>
           <div className="item">
-            <img src={imagen2} alt="Producto 2" />
-            <p>Clothes</p>
+            <img src={imagen4} alt="Producto 2" />
+            <button className="product-button">Clothes</button>
           </div>
           <div className="item">
-            <img src={imagen1} alt="Producto 3" />
-            <p>Appliances</p>
+            <img src={imagen5} alt="Producto 3" />
+            <button className="product-button">Shoes</button>
           </div>
         </div>
+
+
       </section>
     </div>
   );
@@ -57,8 +61,8 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} /> {/* Página principal */}
-        <Route path="/about" element={<About />} /> {/* Nueva página About */}
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </Router>
   );

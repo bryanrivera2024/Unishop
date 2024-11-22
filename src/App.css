@@ -1,3 +1,13 @@
+/* Establecer el tamaño de la ventana */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Evita el desbordamiento horizontal */
+  box-sizing: border-box; /* Garantiza que el padding no aumente el tamaño total */
+}
+
+
 /* Estilos generales */
 body {
   margin: 0;
@@ -69,7 +79,7 @@ body {
 /* Sección de botones y fotos */
 .main-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin-top: 40px; /* Ajustado para dar más espacio */
 }
 
@@ -87,10 +97,11 @@ body {
   background-color: #c49672;
   color: white;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 20px;
 }
 
 .buttons-container button:hover {
+  
   background-color: #775541;
 }
 
@@ -119,3 +130,72 @@ body {
   font-size: 18px;
   color: #333;
 }
+
+/* Estilo para el banner */
+.banner {
+  text-align: center;
+  background-image: url('./Banner.webp'); /* Asegúrate de que la ruta sea correcta */
+  background-size: cover; /* Hace que la imagen cubra toda la sección */
+  background-position: center; /* Centra la imagen */
+  padding: 20px 0; /* Ajustamos el padding para hacer el banner más estrecho */
+  width: 97%; /* Asegura que el banner ocupe todo el ancho */
+  height: 250px; /* Ajusta la altura del banner a 300px, puedes cambiar este valor a lo que desees */
+  color: white; /* Texto blanco para que sea legible sobre la imagen */
+  margin-bottom: 20px;
+}
+
+/* Estilo para el título del banner */
+.banner h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+/* Estilo para la barra de búsqueda */
+.search-bar {
+  padding: 10px;
+  width: 50%;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Estilo para el contenedor de imágenes */
+.images-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 70%;
+  margin-top: 30px;
+  gap: 20px; /* Espacio entre los items */
+}
+
+/* Estilo para los elementos individuales (cada imagen y su botón) */
+.item {
+  display: flex;
+  flex-direction: column; /* Esto hace que la imagen y el botón estén uno debajo del otro */
+  align-items: center; /* Centra tanto la imagen como el botón */
+  text-align: center;
+}
+
+/* Estilo para los botones dentro de los items */
+.product-button {
+  padding: 9px 0;  /* Ajustamos el padding para que el alto sea uniforme */
+  font-size: 18px;
+  background-color: #c49672;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  width: 200px; /* Ancho fijo para todos los botones */
+  margin-top: 10px; /* Agrega espacio entre la imagen y el botón */
+}
+
+.product-button:hover {
+  background-color: #775541;
+}
+
+
