@@ -17,6 +17,7 @@ function About() {
             <li><Link to="/about">About Us</Link></li>
             <li><a href="#profile">Profile</a></li>
             <li><a href="#categories">Categories</a></li>
+            <li><Link to="/social-media">Social Media</Link></li>
           </ul>
         </nav>
         <div className="linea"></div>
