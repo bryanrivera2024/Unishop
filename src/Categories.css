@@ -1,0 +1,22 @@
+
+  body {
+    font-family: Arial, sans-serif;
+}
+.product-card {
+    text-align: center;
+    padding: 10px;
+}
+.product-card img {
+    width: 100%;
+    height: auto;
+}
+.product-card button {
+    background-color: #d19c67;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.carousel-banner {
+    margin-bottom: 20px;
+}

@@ -6,6 +6,9 @@ import imagen3 from "./Electrodomesticos.webp";
 import imagen4 from "./Clothes.webp";
 import imagen5 from "./Shoes.webp";
 import About from './About';
+import Social from './Social';
+import Categories from './Categories';
+
 
 function Home() {
   return (
@@ -16,7 +19,8 @@ function Home() {
             <li><Link to="/">Home</Link></li>
             <li><Link to="/about">About Us</Link></li>
             <li><a href="#profile">Profile</a></li>
-            <li><a href="#categories">Categories</a></li>
+            <li><Link to="categories">Categories</Link></li>
+            <li><Link to="/social-media">Social Media</Link></li>
           </ul>
         </nav>
         <div className="linea"></div>
@@ -63,6 +67,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/social-media" element={<Social/>} />
+        <Route path="/categories" element={<Categories/>} />
       </Routes>
     </Router>
   );
