@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
 
@@ -10,6 +11,7 @@ import Social from './Social';
 import Categories from './Categories';
 
 
+
 function Home() {
   return (
     <div className="app-container">
@@ -19,7 +21,6 @@ function Home() {
             <li><Link to="/">Home</Link></li>
             <li><Link to="/about">About Us</Link></li>
             <li><a href="#profile">Profile</a></li>
-            <li><Link to="categories">Categories</Link></li>
             <li><Link to="/social-media">Social Media</Link></li>
           </ul>
         </nav>
@@ -42,12 +43,14 @@ function Home() {
 
         <div className="images-container">
           <div className="item">
-            <img src={imagen3} alt="Producto 1" />
+            <img src={imagen3} alt="Producto 1" /> 
             <button className="product-button">Electrodomestics</button>
           </div>
           <div className="item">
             <img src={imagen4} alt="Producto 2" />
+            <Link to="categories">
             <button className="product-button">Clothes</button>
+            </Link>
           </div>
           <div className="item">
             <img src={imagen5} alt="Producto 3" />
@@ -73,5 +76,7 @@ function App() {
     </Router>
   );
 }
+
+
 
 export default App;
