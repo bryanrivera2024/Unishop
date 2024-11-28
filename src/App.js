@@ -8,6 +8,7 @@ import imagen5 from "./Shoes.webp";
 import About from './About';
 import Social from './Social';
 import Categories from './Categories';
+import Shoes from './Shoes';
 
 function Home() {
   const [searchTerm, setSearchTerm] = useState(""); // Estado para el término de búsqueda
@@ -57,14 +58,7 @@ function Home() {
         </div>
 
         <div className="images-container">
-          {filteredItems.map((item, index) => (
-            <div className="item" key={index}>
-              <img src={item.image} alt={item.name} /> 
-              <Link to="/categories">
-                <button className="product-button">{item.name}</button>
-              </Link>
-            </div>
-          ))}
+
         </div>
       </section>
     </div>
@@ -77,8 +71,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/social-media" element={<Social />} />
-        <Route path="/categories" element={<Categories />} />
+
       </Routes>
     </Router>
   );    
