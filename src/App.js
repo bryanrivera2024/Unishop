@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
 
@@ -8,6 +9,8 @@ import imagen5 from "./Shoes.webp";
 import About from './About';
 import Social from './Social';
 import Categories from './Categories';
+
+
 
 function Home() {
   const [searchTerm, setSearchTerm] = useState(""); // Estado para controlar el término de búsqueda
@@ -31,7 +34,6 @@ function Home() {
             <li><Link to="/">Home</Link></li>
             <li><Link to="/about">About Us</Link></li>
             <li><a href="#profile">Profile</a></li>
-            <li><Link to="categories">Categories</Link></li>
             <li><Link to="/social-media">Social Media</Link></li>
           </ul>
         </nav>
@@ -58,12 +60,20 @@ function Home() {
         </div>
 
         <div className="images-container">
-          {filteredItems.map((item, index) => (
-            <div key={index} className="item">
-              <img src={item.image} alt={item.name} />
-              <button className="product-button">{item.name}</button>
-            </div>
-          ))}
+          <div className="item">
+            <img src={imagen3} alt="Producto 1" /> 
+            <button className="product-button">Electrodomestics</button>
+          </div>
+          <div className="item">
+            <img src={imagen4} alt="Producto 2" />
+            <Link to="categories">
+            <button className="product-button">Clothes</button>
+            </Link>
+          </div>
+          <div className="item">
+            <img src={imagen5} alt="Producto 3" />
+            <button className="product-button">Shoes</button>
+          </div>
         </div>
       </section>
     </div>
@@ -82,5 +92,7 @@ function App() {
     </Router>
   );
 }
+
+
 
 export default App;
