@@ -1,5 +1,4 @@
-import React from 'react';
-
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
 
@@ -10,10 +9,8 @@ import About from './About';
 import Social from './Social';
 import Categories from './Categories';
 
-
-
 function Home() {
-  const [searchTerm, setSearchTerm] = useState(""); // Estado para controlar el término de búsqueda
+  const [searchTerm, setSearchTerm] = useState(""); // Estado para el término de búsqueda
 
   const items = [
     { name: 'Electrodomestics', image: imagen3 },
@@ -21,11 +18,11 @@ function Home() {
     { name: 'Shoes', image: imagen5 },
   ];
 
-  // Filtrar los ítems en función del término de búsqueda
+  // Filtra los items según el término de búsqueda
   const filteredItems = items.filter(item =>
     item.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
-
+  
   return (
     <div className="app-container">
       <header>
@@ -60,20 +57,14 @@ function Home() {
         </div>
 
         <div className="images-container">
-          <div className="item">
-            <img src={imagen3} alt="Producto 1" /> 
-            <button className="product-button">Electrodomestics</button>
-          </div>
-          <div className="item">
-            <img src={imagen4} alt="Producto 2" />
-            <Link to="categories">
-            <button className="product-button">Clothes</button>
-            </Link>
-          </div>
-          <div className="item">
-            <img src={imagen5} alt="Producto 3" />
-            <button className="product-button">Shoes</button>
-          </div>
+          {filteredItems.map((item, index) => (
+            <div className="item" key={index}>
+              <img src={item.image} alt={item.name} /> 
+              <Link to="/categories">
+                <button className="product-button">{item.name}</button>
+              </Link>
+            </div>
+          ))}
         </div>
       </section>
     </div>
@@ -86,13 +77,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/social-media" element={<Social/>} />
-        <Route path="/categories" element={<Categories/>} />
+        <Route path="/social-media" element={<Social />} />
+        <Route path="/categories" element={<Categories />} />
       </Routes>
     </Router>
-  );
+  );    
 }
-
-
 
 export default App;
