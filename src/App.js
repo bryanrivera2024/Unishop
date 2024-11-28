@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
 
@@ -9,7 +8,7 @@ import imagen5 from "./Shoes.webp";
 import About from './About';
 import Social from './Social';
 import Categories from './Categories';
-
+import Electrodomesticos from './Electrodomesticos';
 
 
 function Home() {
@@ -44,7 +43,9 @@ function Home() {
         <div className="images-container">
           <div className="item">
             <img src={imagen3} alt="Producto 1" /> 
+            <Link to="Electrodomesticos">
             <button className="product-button">Electrodomestics</button>
+            </Link>
           </div>
           <div className="item">
             <img src={imagen4} alt="Producto 2" />
@@ -72,6 +73,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/social-media" element={<Social/>} />
         <Route path="/categories" element={<Categories/>} />
+        <Route path="/electrodomesticos" element={<Electrodomesticos/>} />
       </Routes>
     </Router>
   );
