@@ -28,6 +28,9 @@
     width: 70%; /* Ajusta el tamaño del cuadro */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
   }
+  .info-box h1 {
+    margin-bottom: 20px; /* Aumenta este valor según lo que necesites */
+  }
   
   .info-box h2 {
     margin-top: 0;
@@ -36,6 +39,27 @@
   .info-box p {
     margin: 0;
   }
+
+  .shopping-now-button {
+    padding: 15px;
+    font-size: 18px;
+    background-color: #c49672;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    width: 200px; /* Ancho fijo para que coincida con los otros botones */
+    margin-top: 20px; /* Espacio entre el texto y el botón */
+    margin-bottom: 30px; /* Espacio adicional para separar del fondo */
+  }
+  
+  .shopping-now-button:hover {
+    background-color: #775541;
+  }
+  
   
  /* Fondo café en la mitad inferior */
 .lower-section {
