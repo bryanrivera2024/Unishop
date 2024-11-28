@@ -9,6 +9,7 @@ import imagen5 from "./Shoes.webp";
 import About from './About';
 import Social from './Social';
 import Categories from './Categories';
+import Shoes from './Shoes';
 
 
 
@@ -54,7 +55,9 @@ function Home() {
           </div>
           <div className="item">
             <img src={imagen5} alt="Producto 3" />
+            <Link to="Shoes">
             <button className="product-button">Shoes</button>
+            </Link>
           </div>
         </div>
 
@@ -72,6 +75,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/social-media" element={<Social/>} />
         <Route path="/categories" element={<Categories/>} />
+        <Route path="/Shoes" element={<Shoes/>} />
       </Routes>
     </Router>
   );
