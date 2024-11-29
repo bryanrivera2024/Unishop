@@ -7,7 +7,7 @@ import imagen3 from "./x logo.png"
 
 
 
-function App() {
+function Social() {
     return (
         <div className="app-container">
             {/* Menú de navegación */}
@@ -61,4 +61,4 @@ function App() {
     );
 }
 
-export default App
+export default Social

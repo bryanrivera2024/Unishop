@@ -9,7 +9,7 @@ import imagen4 from "./image (1).png"
 
 
 
-function App() {
+function Categories() {
     return (
         <div className="app-container">
             {/* Menú de navegación */}
@@ -90,4 +90,4 @@ function App() {
     );
 }
 
-export default App;
+export default Categories;
