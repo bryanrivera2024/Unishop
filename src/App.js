@@ -5,8 +5,6 @@ import { Home } from './Home';
 import About from './About';
 import Social from './Social';
 import Categories from './Categories';
-import { Login } from './Login';
-import Pagocard from './Pagocard';
 
 function App() {
   return (
@@ -23,5 +21,7 @@ function App() {
     </Router>
   );
 }
+
+
 
 export default App;

@@ -1,16 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Categories.css';
-import imagen1 from "./image.png"
-import imagen2 from "./image (2).png"
-import imagen3 from "./image (3).png"                                                                                                      
-import imagen4 from "./image (1).png"
-import ropa from "./clothes.jpg"
+import './Shoes.css';
+import picture1 from "./image1.jpg"
+import picture2 from "./image2.jpg"
+import picture3 from "./image3.jpg"                                                                                                      
+import picture4 from "./image4.jpg"
+import shoes from "./Shoes.jpg"
 
 
 
 
-function Categories() {
+function App() {
     return (
         <div className="app-container">
       <header>
@@ -34,7 +34,7 @@ function Categories() {
                     <div className="carousel-inner">
                         <div className="carousel-item active">
                             <img
-                                src={ropa}
+                                src={shoes}
                                 className="d-block w-100"
                                 alt="Banner Image"
                             />
@@ -47,33 +47,33 @@ function Categories() {
                     <div className="row">
                         <div className="col-md-3">
                             <div className="product-card">
-                                <img src={imagen1} alt="Suéter casual" />
-                                <h5>Suéter casual</h5>
-                                <p>$5.00</p>
+                                <img src={picture1} alt="Suéter casual" />
+                                <h5>Converse</h5>
+                                <p>$75.00</p>
                                 <button>add</button>
                             </div>
                         </div>
                         <div className="col-md-3">
                             <div className="product-card">
-                                <img src={imagen4} alt="Pantalón" />
-                                <h5>Pantalón</h5>
-                                <p>$5.00</p>
+                                <img src={picture4} alt="Pantalón" />
+                                <h5>Converse</h5>
+                                <p>$75.00</p>
                                 <button>add</button>
                             </div>
                         </div>
                         <div className="col-md-3">
                             <div className="product-card">
-                                <img src={imagen2} alt="Falda" />
-                                <h5>Falda</h5>
-                                <p>$5.00</p>
+                                <img src={picture2} alt="Falda" />
+                                <h5>Converse</h5>
+                                <p>$80.00</p>
                                 <button>add</button>
                             </div>
                         </div>
                         <div className="col-md-3">
                             <div className="product-card">
-                                <img src={imagen3} alt="Falda" />
-                                <h5>Falda</h5>
-                                <p>$5.00</p>
+                                <img src={picture3} alt="Falda" />
+                                <h5>Addidas</h5>
+                                <p>$95.00</p>
                                 <button>add</button>
                             </div>
                         </div>
@@ -86,3 +86,4 @@ function Categories() {
     );
 }
 
+export default App;

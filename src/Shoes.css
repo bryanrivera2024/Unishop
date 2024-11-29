@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
 }
-
+ 
 /* Contenedor de las tarjetas de productos */
 .product-card {
     text-align: center;
@@ -15,12 +15,12 @@ body {
     flex-direction: column;
     justify-content: space-between; /* Asegura que el contenido se distribuya uniformemente */
 }
-
+ 
 /* Efecto hover para ampliar la tarjeta */
 .product-card:hover {
     transform: translateY(-10px);
 }
-
+ 
 .product-card img {
     width: 100%;
     height: 300px; /* Ajustamos la altura de las imágenes */
@@ -28,20 +28,20 @@ body {
     border-radius: 8px;
     margin-bottom: 15px; /* Espacio entre la imagen y el contenido */
 }
-
+ 
 /* Estilos para los textos dentro de las tarjetas */
 .product-card h5 {
     font-size: 1.1rem;
     font-weight: bold;
     margin-bottom: 10px;
 }
-
+ 
 .product-card p {
     font-size: 1rem;
     color: #333;
     margin-bottom: 15px;
 }
-
+ 
 /* Estilo para los botones */
 .product-card button {
     background-color: #d19c67;
@@ -52,21 +52,26 @@ body {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-
+ 
 .product-card button:hover {
     background-color: #b78d53;
 }
-
+ 
 /* Contenedor de la fila de productos */
 .row {
     display: flex;
     justify-content: space-between;
     gap: 5px; /* Separación entre las columnas */
 }
-
+ 
 /* Estilo del carrusel */
-.carousel-banner {
-    margin-bottom: 45px;
+/* Estilo para el banner */
+
+.carousel-item img {
     width: 100%;
-    height: 100%;
+    height: 100%; /* Hace que la imagen ocupe todo el contenedor */
+    object-fit: cover; /* Mantiene la proporción de la imagen */
 }
+
+
+  
