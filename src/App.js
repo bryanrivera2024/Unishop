@@ -7,6 +7,7 @@ import Social from './Social';
 import Categories from './Categories';
 import { Login } from './Login';
 import Pagocard from './Pagocard';
+import Signup from './Signup';
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
         <Route path="/categories" element={<Categories />} />
         <Route path="/login" element={<Login />} />
         <Route path="/pagocard" element={<Pagocard />} />
-        <Route path="/Iniciarsesion" element={<iniciarsesion />} />
+        <Route path="/Signup" element={<Signup/>} />
       </Routes>
     </Router>
   );
