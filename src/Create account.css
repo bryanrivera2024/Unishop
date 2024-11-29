@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+main{
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+    margin-top: 180px;
+}
+
+.contenedor__todo{
+    width: 500%;
+    max-width: 850px;
+    margin-top: -150px;
+    margin-left: 240px;
+    position: relative;
+}
+
+/* cuadrado del fondo del login*/
+.caja__trasera{ 
+    width: 100%;
+    height: 520px;
+    padding-top: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background: linear-gradient(to right, #c49672 50%, white 50%);
+    /*background-color: rgb(255, 255, 255);*/
+    border-radius: 19px;
+    position: relative;
+
+}
+
+.campos_CC-letras {
+    position: relative;
+    margin-top: -300px;/*here move*/
+    margin-left: 475px;
+    align-content: center;
+    }
+
+.h2{
+    margin-left: -20px;
+    margin-top: -50px;
+    font-size: 40px;
+}
+
+.campos_crear-cuenta input{
+    width: 85%;
+    margin-top: 20px;
+    margin-right: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background: #F2F2F2;
+    font-size: 13px;
+    outline: none;
+    position: relative;
+    width: 250px;
+    height: 35px;
+}
+
+.caja__trasera button{
+    padding: 10px 40px;
+    margin-top: 30px;
+    margin-left: 60px;
+    border-radius: 18px;
+    border: 2px solid black;
+     font-size: 14px;
+     background: #ffffff;
+     font-weight: 1000;
+     cursor: pointer;
+     color: black;
+     outline: none;
+     position: relative;
+     width: 135px;
+}
+
+
+
+.plataformas img{
+    position: relative;
+    width: 180px;
+    height: 80px;
+    margin-top: 10px;
+    margin-bottom: -15px;
+    margin-left: 30px;
+}
+
+.welcome_letras {
+    margin-left: -400px;
+    margin-top: -300px;
+}
+
+.h3{
+    font-size: 40px;
+}
+
+.parrafo{
+ text-align: center;
+ margin-left: -500px;
+}

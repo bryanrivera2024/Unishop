@@ -10,7 +10,7 @@ import ropa from "./clothes.jpg"
 
 
 
-function App() {
+function Categories() {
     return (
         <div className="app-container">
       <header>
@@ -86,4 +86,3 @@ function App() {
     );
 }
 
-export default App;                                                                             
